@@ -81,11 +81,16 @@
                             </div>
                         </div>
                         <div class="col-12 col-sm-3">
-                            <label for="egenero" class="form-label">Género</label>
-                            <input type="text" class="form-control" id="egenero" placeholder="Ingrese el género">
-                            <div class="invalid-feedback">
-                                Por favor ingrese el genero del estudiante
-                            </div>
+                            <label class="form-label" for="genero">Género:</label>
+                            <select class="form-select" id="genero">
+                                <option value="" disabled selected>Seleccione una opción</option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                                <option value="No binario">No binario</option>
+                                <option value="Género fluido">Género fluido</option>
+                                <option value="Prefiere no decir">Prefiere no decir</option>
+                                <option value="Otro">Otro</option>
+                            </select>
                         </div>
                         <div class="col-12 col-sm-3">
                             <label for="tipoSangre" class="form-label">Tipo de sangre</label>
