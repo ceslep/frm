@@ -39,9 +39,14 @@
                         class="bi bi-person-arms-up"></i></button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="adicional-tab" data-bs-toggle="tab" data-bs-target="#adicional-tab-pane"
-                    type="button" role="tab" aria-controls="adicional-tab-pane" aria-selected="false">Adicional <i
-                        class="bi bi-person-fill-add"></i></button>
+                <button class="nav-link" id="datospadres-tab" data-bs-toggle="tab"
+                    data-bs-target="#datospadres-tab-pane" type="button" role="tab" aria-controls="datospadres-tab-pane"
+                    aria-selected="true">Padres y Acudientes<i class="bi bi-person-arms-up"></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="referencial-tab" data-bs-toggle="tab"
+                    data-bs-target="#referencial-tab-pane" type="button" role="tab" aria-controls="referencial-tab-pane"
+                    aria-selected="false">Información Referencial <i class="bi bi-person-fill-add"></i></button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContentDatos">
@@ -50,7 +55,7 @@
                 <fieldset class="border p-4 rounded shadow-sm text-bg-light mt-2">
                     <legend>Información de Identificación</legend>
                     <div class="row mb-3 mt-2">
-                        <div class="col-12 col-md-3 col-lg-3">
+                        <div class="col-12 col-sm-4 col-md-3 col-lg-3">
                             <label for="ecodigo" class="form-label">Código</label>
                             <input type="text" class="form-control bg-body-tertiary" id="ecodigo"
                                 placeholder="Ingrese el código" readonly>
@@ -63,7 +68,7 @@
                                 Por favor ingrese una identificación válida
                             </div>
                         </div>
-                        <div class="col-12 col-md-4 col-lg-3">
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-3">
                             <label for="eyear" class="form-label">Año</label>
                             <input type="text" class="form-control bg-body-tertiary" id="eyear"
                                 placeholder="Ingrese el año" readonly>
@@ -98,7 +103,13 @@
 
                         </div>
                     </div>
-
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label for="eemail_estudiante" class="form-label">Email Estudiante</label>
+                            <input type="email" class="form-control" id="eemail_estudiante"
+                                placeholder="Ingrese el email del estudiante">
+                        </div>
+                    </div>
 
                 </fieldset>
                 <fieldset class="border p-4 rounded shadow-sm mt-2 text-bg-light">
@@ -1344,15 +1355,15 @@
                 <fieldset class="border p-4 rounded shadow-sm mt-2 text-bg-light">
                     <legend>Fecha y Lugar de Nacimiento</legend>
                     <div class="row">
-                        <div class="col-12 col-sm-3">
-                            <label for="efecnac" class="form-label">Fecha Nacimiento.</label>
+                        <div class="col-12 col-sm-4">
+                            <label for="efecnac" class="form-label">Fecha Nac.</label>
                             <input type="date" class="form-control" id="efecnac">
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-12 col-sm-3 col-md-3">
                             <label for="eedad" class="form-label">Edad</label>
                             <input type="text" class="form-control" id="eedad" placeholder="Edad" readonly>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-sm-5 col-md-6">
                             <label for="elugarNacimiento" class="form-label">Lugar</label>
                             <input list="naciList" type="text" id="elugarNacimiento" name="lugarNacimiento"
                                 class="form-select" placeholder="Seleccione un municipio donde nació">
@@ -2571,7 +2582,7 @@
                         </div>
                     </div>
                 </fieldset>
-               
+
 
                 <fieldset class="border p-4 rounded shadow-sm mt-2 text-bg-light">
                     <legend>Telefonos e Información de Residencia</legend>
@@ -2594,7 +2605,7 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-12 col-sm-4">
-                            <label class="form-label" for="elugar">Seleccione una zona y lugar:</label>
+                            <label class="form-label" for="elugar">Zona y lugar:</label>
                             <select name="lugar" id="elugar" class="form-select">
                                 <option selected disabled>Barrio o Vereda</option>
                                 <optgroup label="Zona Urbana">
@@ -2729,7 +2740,7 @@
                         </div>
                         <div class="col-12 col-sm-4">
 
-                            <label for="esisben" class="form-label">Seleccione su nivel SISBÉN</label>
+                            <label for="esisben" class="form-label">Nivel SISBÉN</label>
                             <select class="form-select" id="esisben" name="sisben">
                                 <option selected disabled>Seleccione su nivel</option>
                                 <option value="A">Grupo A</option>
@@ -2810,74 +2821,39 @@
                             </select>
                         </div>
                     </div>
-                </fieldset>
-                <div class="row mb-3">
-                    
-                    <div class="col-md-3">
-                        <label for="egrado" class="form-label">Grado</label>
-                        <input type="text" class="form-control bg-body-tertiary" id="egrado"
-                            placeholder="Ingrese el grado" readonly>
-                        <div class="invalid-feedback">
-                            Por favor ingrese el grado al que se matricula del estudiante
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="eestado" class="form-label">Estado</label>
+                            <input type="text" class="form-control" id="eestado" placeholder="estado del estudiante">
                         </div>
                     </div>
-                   
-                    <div class="col-md-3 d-none">
-                        <label for="eanio" class="form-label">Año</label>
-                        <input type="text" class="form-control bg-body-tertiary" id="eanio" placeholder="Ingrese el año"
-                            readonly>
-                        <div class="invalid-feedback">
-                            Por favor ingrese el año al que se matricula del estudiante
-                        </div>
+            </div>
+            </fieldset>
+            <div class="row mb-3">
+
+
+
+                <div class="col-md-3 d-none">
+                    <label for="eanio" class="form-label">Año</label>
+                    <input type="text" class="form-control bg-body-tertiary" id="eanio" placeholder="Ingrese el año"
+                        readonly>
+                    <div class="invalid-feedback">
+                        Por favor ingrese el año al que se matricula del estudiante
                     </div>
                 </div>
+            </div>
 
-                <div class="row mb-3">
+            <div class="row mb-3">
 
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-md-4">
-                        <label for="eHED" class="form-label">HED</label>
-                        <input type="text" class="form-control" id="eHED" placeholder="Ingrese HED">
-                    </div>
-                    <div class="col-md-4">
-                        <label for="eacudiente" class="form-label">Acudiente</label>
-                        <input type="text" class="form-control" id="eacudiente" placeholder="Ingrese el acudiente">
-                    </div>
-
-                </div>
-
-                <div class="row mb-3">
+            </div>
 
 
-                    <div class="col-md-6 col-lg-3">
-                        <label for="esede" class="form-label">Sede</label>
-                        <input type="text" class="form-control bg-body-tertiary" id="esede"
-                            placeholder="Ingrese la sede" readonly>
-                    </div>
-                   
-                </div>
 
-                <div class="row mb-3">
-                    <div class="col-md-4">
-                        <label for="eestado" class="form-label">Estado</label>
-                        <input type="text" class="form-control" id="eestado" placeholder="estado del estudiante">
-                    </div>
-                    <div class="col-md-4">
-                        <label for="eemail_estudiante" class="form-label">Email Estudiante</label>
-                        <input type="email" class="form-control" id="eemail_estudiante"
-                            placeholder="Ingrese el email del estudiante">
-                    </div>
-                    <div class="col-md-4">
-                        <label for="eemail_acudiente" class="form-label">Email Acudiente</label>
-                        <input type="email" class="form-control" id="eemail_acudiente"
-                            placeholder="Ingrese el email del acudiente">
-                    </div>
 
-                </div>
-                            </div>
-            <div class="tab-pane fade h-auto" id="datosacademicos-tab-pane" role="tabpanel" aria-labelledby="datosacademicos-tab">
+
+
+            <div class="tab-pane fade h-auto" id="datosacademicos-tab-pane" role="tabpanel"
+                aria-labelledby="datosacademicos-tab">
                 <fieldset class="border p-4 rounded shadow-sm mt-2 text-bg-light">
                     <legend>Asignación académica</legend>
                     <div class="row mb-3">
@@ -2908,6 +2884,14 @@
                                 Por favor ingrese el número de aula al que se matricula del estudiante
                             </div>
                         </div>
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <label for="egrado" class="form-label">Grado</label>
+                            <input type="text" class="form-control bg-body-tertiary" id="egrado"
+                                placeholder="Ingrese el grado" readonly>
+                            <div class="invalid-feedback">
+                                Por favor ingrese el grado al que se matricula del estudiante
+                            </div>
+                        </div>
                         <div class="col-md-6 col-lg-3">
                             <label for="einstitucion_externa" class="form-label">Institución Externa</label>
                             <input type="text" class="form-control" id="einstitucion_externa"
@@ -2921,17 +2905,21 @@
                                 placeholder="Ingrese otra información"></textarea>
                         </div>
                     </div>
-    
+                    <div class="row mb-3">
+
+
+                        <div class="col-md-6 col-lg-3">
+                            <label for="esede" class="form-label">Sede Actual</label>
+                            <input type="text" class="form-control bg-body-tertiary" id="esede"
+                                placeholder="Ingrese la sede" readonly>
+                        </div>
+
+                    </div>
                 </fieldset>
             </div>
-            <div class="tab-pane fade h-auto" id="adicional-tab-pane" role="tabpanel" aria-labelledby="adicional-tab"
+            <div class="tab-pane fade show" id="datospadres-tab-pane" role="tabpanel" aria-labelledby="datospadres-tab"
                 tabindex="0">
-
-
-
-
-
-                <fieldset class="border p-4 rounded shadow-sm">
+                <fieldset class="border p-4 rounded shadow-sm mt-2 text-bg-light">
                     <legend>Información de los padres</legend>
                     <div class="row">
                         <div class="col-12 col-sm-6">
@@ -2955,7 +2943,13 @@
                                     laboral del padre</label>
                                 <select id="eocupacionpadre" name="ocupacionpadre" class="form-select"
                                     aria-label="Select Occupation">
-                                    <option selected>Seleccione una ocupacion</option>
+                                    <option selected>Seleccione una ocupación</option>
+                                    <optgroup label="Sin Ocupación">
+                                        <option value="desempleado">Desempleado</option>
+                                        <option value="estudiante">Estudiante</option>
+                                        <option value="ama_de_casa">Ama de Casa</option>
+                                        <option value="sin_ocupacion">Sin Ocupación</option>
+                                    </optgroup>
                                     <optgroup label="Administración y Oficinas">
                                         <option value="secretaria">Secretaria</option>
                                         <option value="asistente_administrativo">Asistente Administrativo</option>
@@ -3018,12 +3012,7 @@
                                         </option>
                                         <option value="pensionado_magisterio">Pensionado del Magisterio</option>
                                     </optgroup>
-                                    <optgroup label="Sin Ocupación">
-                                        <option value="desempleado">Desempleado</option>
-                                        <option value="estudiante">Estudiante</option>
-                                        <option value="ama_de_casa">Ama de Casa</option>
-                                        <option value="sin_ocupacion">Sin Ocupación</option>
-                                    </optgroup>
+
 
                                     <optgroup label="Transporte y Logística">
                                         <option value="conductor">Conductor</option>
@@ -3068,7 +3057,7 @@
                                     laboral de la madre</label>
                                 <select id="eocupacionmadre" name="ocupacionmadre" class="form-select"
                                     aria-label="Select Occupation">
-                                    <option selected disabled>Seleccione una ocupacion</option>
+                                    <option selected disabled>Seleccione una ocupación</option>
                                     <optgroup label="Sin Ocupación">
                                         <option value="desempleado">Desempleado</option>
                                         <option value="estudiante">Estudiante</option>
@@ -3160,7 +3149,56 @@
 
                         </div>
                     </div>
+
                 </fieldset>
+
+                <fieldset class="border p-4 rounded shadow-sm mt-2 text-bg-light">
+                    <legend>Acudiente</legend>
+
+                    <div class="row mb-3">
+                        <div class="col-12 col-sm-4 col-md-4">
+                            <label for="eacudiente" class="form-label">Identificación</label>
+                            <input type="text" class="form-control" id="eacudiente"
+                                placeholder="Identificación del acudiente">
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-8">
+                            <label for="eacudiente" class="form-label">Nombres Acudiente</label>
+                            <input type="text" class="form-control" id="eacudiente" placeholder="Ingrese el acudiente">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="eemail_acudiente" class="form-label">Email Acudiente</label>
+                            <input type="email" class="form-control" id="eemail_acudiente"
+                                placeholder="Ingrese el email del acudiente">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <label class="form-label" for="eparentesco" name="parentesco">Seleccione el
+                                parentesco:</label>
+                            <select class="form-select" id="eparentesco">
+                                <option value="" disabled selected>Seleccione una opción</option>
+                                <option value="Mamá">Mamá</option>
+                                <option value="Papá">Papá</option>
+                                <option value="Abuelo(a)">Abuelo(a)</option>
+                                <option value="Tío(a)">Tío(a)</option>
+                                <option value="Primo(a)">Primo(a)</option>
+                                <option value="Hermano(a)">Hermano(a)</option>
+                                <option value="Otro familiar">Otro familiar</option>
+                                <option value="Padre o madre sustituta">Padre o madre sustituta</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+            </div>
+            <div class="tab-pane fade h-auto" id="referencial-tab-pane" role="tabpanel"
+                aria-labelledby="referencial-tab" tabindex="0">
+
+
+
+
+
+
                 <fieldset class="border p-4 rounded shadow-sm">
                     <legend>Lugar y fecha de Desplazamiento</legend>
                     <div class="row">
@@ -4391,107 +4429,49 @@
                             </datalist>
                         </div>
                         <div class="col-12 col-sm-3">
-                            <label for="fechaDesplazamiento">Fecha desplazamiento</label>
+                            <label for="fechaDesplazamiento">Fecha</label>
                             <input type="date" name="fechaDesplazamiento" id="efechaDesplazamiento"
                                 class="form-control">
                         </div>
                     </div>
                 </fieldset>
                 <fieldset class="border p-4 rounded shadow-s">
-                    <legend>Discapacidades y capacidades</legend>
-                    <div class="row">
+                    <legend>H.E.D. (Necesidades educativas especiales)</legend>
+                    <div class="row mb-3">
                         <div class="col-12">
-                            <label for="caracteristica1">Seleccione una característica</label>
-                            <select id="ecaracteristica1" name="caracteristica1" class="form-select">
-                                <option value="">Seleccione una opción</option>
-
-                                <!-- Discapacidades -->
-                                <optgroup label="Discapacidades Físicas">
-                                    <option value="movilidad">Movilidad reducida</option>
-                                    <option value="auditiva">Discapacidad auditiva</option>
-                                    <option value="visual">Discapacidad visual</option>
-                                </optgroup>
-                                <optgroup label="Discapacidades Intelectuales">
-                                    <option value="cognitiva">Discapacidad cognitiva</option>
-                                    <option value="autismo">Trastorno del espectro autista</option>
-                                    <option value="sindrome-down">Síndrome de Down</option>
-                                </optgroup>
-                                <optgroup label="Discapacidades Psicosociales">
-                                    <option value="ansiedad">Ansiedad</option>
-                                    <option value="depresion">Depresión</option>
-                                    <option value="trastorno-bipolar">Trastorno bipolar</option>
-                                </optgroup>
-
-                                <!-- Capacidades Excepcionales -->
-                                <optgroup label="Capacidades Intelectuales">
-                                    <option value="alto-coeficiente">Alto coeficiente intelectual
-                                    </option>
-                                    <option value="pensamiento-critico">Pensamiento crítico</option>
-                                </optgroup>
-                                <optgroup label="Capacidades Artísticas">
-                                    <option value="musica">Talento musical</option>
-                                    <option value="arte">Habilidad en artes visuales</option>
-                                    <option value="danza">Habilidad en danza</option>
-                                </optgroup>
-                                <optgroup label="Capacidades Deportivas">
-                                    <option value="deportes">Destrezas deportivas</option>
-                                    <option value="agilidad">Alta agilidad física</option>
-                                </optgroup>
-                                <optgroup label="No presenta características">
-                                    <option value="noaplica">No Aplica</option>
-                                </optgroup>
+                            <label class="form-label" for="ediscapacidad">Seleccione el tipo de discapacidad:</label>
+                            <select class="form-select" id="ediscapacidad">
+                                <option value="" disabled selected>Seleccione una opción</option>
+                                <option value="DISCAPACIDAD FÍSICA">DISCAPACIDAD FÍSICA</option>
+                                <option value="DISCAPACIDAD AUDITIVA">DISCAPACIDAD AUDITIVA</option>
+                                <option value="USUARIO DE LENGUA DE SEÑAS COLOMBIANA">USUARIO DE LENGUA DE SEÑAS
+                                    COLOMBIANA</option>
+                                <option value="DISCAPACIDAD AUDITIVA USUARIO DEL CASTELLANO">DISCAPACIDAD AUDITIVA
+                                    USUARIO DEL CASTELLANO</option>
+                                <option value="DISCAPACIDAD VISUAL BAJA VISIÓN IRREVERSIBLE">DISCAPACIDAD VISUAL BAJA
+                                    VISIÓN IRREVERSIBLE</option>
+                                <option value="DISCAPACIDAD VISUAL CEGUERA SORDOCEGUERA">DISCAPACIDAD VISUAL CEGUERA
+                                    SORDOCEGUERA</option>
+                                <option value="DISCAPACIDAD INTELECTUAL">DISCAPACIDAD INTELECTUAL</option>
+                                <option value="TRASTORNO DEL ESPECTRO AUTISTA">TRASTORNO DEL ESPECTRO AUTISTA</option>
+                                <option value="DISCAPACIDAD PSICOSOCIAL (MENTAL)">DISCAPACIDAD PSICOSOCIAL (MENTAL)
+                                </option>
+                                <option value="DISCAPACIDAD MULTIPLE">DISCAPACIDAD MULTIPLE</option>
+                                <option value="MULTIPLE">MULTIPLE</option>
                             </select>
-
                         </div>
-                        <div class="col-12">
-                            <label for="caracteristica2">Seleccione una segunda característica </label>
-                            <select id="ecaracteristica2" name="caracteristica2" class="form-select">
-                                <option value="">Seleccione una opción</option>
-
-                                <!-- Discapacidades -->
-                                <optgroup label="Discapacidades Físicas">
-                                    <option value="movilidad">Movilidad reducida</option>
-                                    <option value="auditiva">Discapacidad auditiva</option>
-                                    <option value="visual">Discapacidad visual</option>
-                                </optgroup>
-                                <optgroup label="Discapacidades Intelectuales">
-                                    <option value="cognitiva">Discapacidad cognitiva</option>
-                                    <option value="autismo">Trastorno del espectro autista</option>
-                                    <option value="sindrome-down">Síndrome de Down</option>
-                                </optgroup>
-                                <optgroup label="Discapacidades Psicosociales">
-                                    <option value="ansiedad">Ansiedad</option>
-                                    <option value="depresion">Depresión</option>
-                                    <option value="trastorno-bipolar">Trastorno bipolar</option>
-                                </optgroup>
-
-                                <!-- Capacidades Excepcionales -->
-                                <optgroup label="Capacidades Intelectuales">
-                                    <option value="alto-coeficiente">Alto coeficiente intelectual
-                                    </option>
-                                    <option value="pensamiento-critico">Pensamiento crítico</option>
-                                </optgroup>
-                                <optgroup label="Capacidades Artísticas">
-                                    <option value="musica">Talento musical</option>
-                                    <option value="arte">Habilidad en artes visuales</option>
-                                    <option value="danza">Habilidad en danza</option>
-                                </optgroup>
-                                <optgroup label="Capacidades Deportivas">
-                                    <option value="deportes">Destrezas deportivas</option>
-                                    <option value="agilidad">Alta agilidad física</option>
-                                </optgroup>
-                                <optgroup label="No presenta características">
-                                    <option value="noaplica">No Aplica</option>
-                                </optgroup>
-                            </select>
-
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <label for="eHED" class="form-label">HED</label>
+                            <input type="text" class="form-control" id="eHED" placeholder="Ingrese HED">
                         </div>
                     </div>
                 </fieldset>
                 <fieldset class="border p-4 rounded shadow-sm">
                     <legend>Etnia o identificación social</legend>
                     <div class="row">
-                        <div class="col-12 col-sm-8">
+                        <div class="col-12 col-sm-12">
                             <label for="etnia">Seleccione la etnia o distinción social</label>
                             <select id="eetnia" name="etnia" class="form-select">
                                 <option value="">Seleccione una opción</option>
